@@ -8,8 +8,9 @@
             <ul v-for="(id, index) in userIds" :key="index">
                 <li><router-link :to="{ name: ViewProfile, params: { user_id: id } }">Profile {{id}}</router-link></li>
             </ul>
-            <h2>Redirect Programatically</h2>
+            <h2>Navigation Controls</h2>
             <button @click='goHome()'>Go Home</button>
+            <button @click="goBack()">Go Back</button>
         </nav>
     </div>
 </template>
@@ -26,6 +27,10 @@ export default {
   methods: {
     goHome () {
       this.$router.push({ name: 'Home' })
+    },
+
+    goBack () {
+      this.$router.go(-1)
     }
   }
 }
