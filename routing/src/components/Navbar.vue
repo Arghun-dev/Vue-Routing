@@ -11,6 +11,7 @@
             <h2>Navigation Controls</h2>
             <button @click='goHome()'>Go Home</button>
             <button @click="goBack()">Go Back</button>
+            <button @click="goForward()">Go Forward</button>
         </nav>
     </div>
 </template>
@@ -31,6 +32,10 @@ export default {
 
     goBack () {
       this.$router.go(-1)
+    },
+
+    goForward () {
+      this.$router.go(1)
     }
   }
 }
