@@ -56,4 +56,8 @@ ul li {
 a {
     color: #42b983;
 }
+
+a.router-link-exact-active {
+    color: purple;
+}
 </style>
